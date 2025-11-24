@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default async function Products() {
-    const res =await fetch("")
-    const data = await res.json();
-    console.log(data);
+export default  function Products() {
+    // const res =await fetch("")
+    // const data = await res.json();
+    // console.log(data);
   return (
     <div className='flex flex-col'>
    
