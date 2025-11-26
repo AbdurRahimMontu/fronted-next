@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
   return (
     <div>
-<footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+<footer className="footer shadow-2xl bg-base-300 footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
   <nav>
     <div className="grid grid-flow-col gap-4">
       <a>
@@ -40,6 +41,28 @@ export default function Footer() {
         </svg>
       </a>
     </div>
+  </nav>
+  <nav>
+     <ul className='flex gap-5'>
+      <li>
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/products">Products</Link>
+      </li>
+      <li>
+        <Link href="/about">About</Link>
+      </li>
+      <li>
+        <Link href="/contact">Contact</Link>
+      </li>
+      <li>
+        <Link href="/addProduct">Add Product</Link>
+      </li>
+      <li>
+        <Link href="/manageProduct">Manage Product</Link>
+      </li>
+     </ul>
   </nav>
   <aside>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>

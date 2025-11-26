@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function AddProduct() {
 const [title, setTitle] = useState("");
@@ -50,7 +51,7 @@ const [photo, setPhoto] = useState("");
   axios
     .post("http://localhost:5000/products", formData)
     .then((data) => {
-     alert("Product Successfully Added");
+    toast.success("Product Successfully Added");
       console.log(data.data);
 
       // reset fields
@@ -68,12 +69,13 @@ const [photo, setPhoto] = useState("");
 };
 
   // 
-  return <div>Welcome, {session.user.name}
+  return <div>
+    {/* Welcome, {session.user.name} */}
   
   {/*  */}
 
-<div className="p-6">
-      <h2>Add Product</h2>
+<div className="p-6 w-sm mx-auto shadow-2xl">
+      <h2 className="text-2xl text-center font-semibold">Add Product</h2>
       <form onSubmit={handleSubmit} className="space-y-3 mt-4">
   <div>
     <label>Product Title:</label><br />
@@ -133,7 +135,7 @@ const [photo, setPhoto] = useState("");
   <div>
     <label>Priority:</label><br />
     <input 
-      type="number" 
+      type="text" 
       value={priority} 
       onChange={(e) => setPriority(e.target.value)} 
       className="input" 
@@ -152,7 +154,7 @@ const [photo, setPhoto] = useState("");
     />
   </div>
 
-        <button type="submit" className="btn">Add Product</button>
+        <button type="submit" className="btn w-full hover:bg-[#AD46FF] hover:text-white">Add Product</button>
       </form>
       {message && <p className="mt-3">{message}</p>}
     </div>
