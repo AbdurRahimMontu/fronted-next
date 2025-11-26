@@ -2,8 +2,6 @@ export default function AboutSection() {
   return (
     <div className="bg-base-200 ">
       <div className="w-11/12 md:w-10/12 mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-        {/* Left Image */}
         <div>
           <img
             src="/client1.jpg"
@@ -12,7 +10,7 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* Right Content */}
+     
         <div>
           <h2 className="text-3xl font-bold mb-4">About Our Electronics Shop</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
