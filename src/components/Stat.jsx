@@ -4,7 +4,7 @@ export default function Stat() {
   return (
     <div className='py-15 bg-base-200 text-center'>
 <div className="stats shadow grid lg:grid-cols-3 grid-cols-1">
-  <div className="stat">
+  <div className="">
     <div className="stat-figure text-primary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export default function Stat() {
     <div className="stat-desc">21% more than last month</div>
   </div>
 
-  <div className="stat">
+  <div className="">
     <div className="stat-figure text-secondary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ export default function Stat() {
     <div className="stat-desc">21% more than last month</div>
   </div>
 
-  <div className="stat">
+  <div className="">
     <div className="stat-figure text-secondary">
       <div className="avatar avatar-online">
         <div className="w-16 rounded-full">
