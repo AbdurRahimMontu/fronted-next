@@ -16,7 +16,7 @@ export default function ProductsPage() {
   return (
 <div>
   <h2 className="py-5 text-3xl text-center">All Products</h2>
-      <div className="grid grid-cols-4 bg-base-100 gap-5 py-5 w-11/12 mx-auto">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-base-100 gap-5 py-5 w-11/12 mx-auto">
       {products.map(product => (
 <div key={product._id} className="card bg-base-100 shadow-sm">
   <figure className="p-5">
