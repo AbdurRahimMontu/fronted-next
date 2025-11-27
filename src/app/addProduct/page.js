@@ -1,11 +1,10 @@
 "use client";
 
 // import { toast } from "react-toastify";
-import { useState } from "react";
-import { useSession } from "next-auth/react";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import axios from "axios";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 export default function AddProduct() {
@@ -49,7 +48,7 @@ const [photo, setPhoto] = useState("");
   };
 
   axios
-    .post("http://localhost:5000/products", formData)
+    .post("https://backend-next-gi6k.vercel.app/products", formData)
     .then((data) => {
     toast.success("Product Successfully Added");
       console.log(data.data);

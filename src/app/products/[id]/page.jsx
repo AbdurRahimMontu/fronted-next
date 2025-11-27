@@ -1,13 +1,13 @@
 "use client"
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 export default function Details() {
   const [product, setProduct] =useState({})
 const { id } = useParams();
   useEffect(()=>{
-         fetch(`http://localhost:5000/products/${id}`)
+         fetch(`https://backend-next-gi6k.vercel.app/products/${id}`)
          .then(res => res.json())
          .then(data=> setProduct(data))
   },[id])

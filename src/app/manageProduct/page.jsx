@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from 'react';
 
 export default function ManageProduct() {
 
@@ -22,7 +22,7 @@ export default function ManageProduct() {
   useEffect(() => {
     if (session?.user?.email) {
       axios
-        .get(`http://localhost:5000/manageProduct?email=${session.user.email}`)
+        .get(`https://backend-next-gi6k.vercel.app/manageProduct?email=${session.user.email}`)
         .then(res => setProducts(res.data))
         .catch(err => console.log(err));
     }
@@ -31,7 +31,7 @@ export default function ManageProduct() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/manageProduct/${id}`)
+      .delete(`https://backend-next-gi6k.vercel.app/manageProduct/${id}`)
       .then(() => {
         setProducts(prev => prev.filter(product => product._id !== id));
       })

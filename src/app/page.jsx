@@ -1,13 +1,13 @@
 "use client";
 import Stat from "@/components/Stat";
-import ClientComment from "../components/Comment";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import ClientComment from "../components/Comment";
 export default function Home() {
    const [products, setProducts] = useState([]);
   
     useEffect(() => {
-      fetch("http://localhost:5000/products")
+      fetch("https://backend-next-gi6k.vercel.app/products")
         .then(res => res.json())
         .then(data => setProducts(data))
         .catch(err => console.log(err));
