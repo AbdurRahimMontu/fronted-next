@@ -3,7 +3,7 @@ import React from 'react'
 export default function Stat() {
   return (
     <div className='py-15 bg-base-200 text-center'>
-<div className="stats shadow">
+<div className="stats shadow grid lg:grid-cols-3 grid-cols-1">
   <div className="stat">
     <div className="stat-figure text-primary">
       <svg
